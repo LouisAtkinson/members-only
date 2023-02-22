@@ -1,0 +1,26 @@
+<% extend('layout') %>
+
+  <h1>Register</h1>
+  <form action="" method="POST">
+    <label for="first_name">First name: </label>
+    <input name="first_name" type="text" />
+    <label for="last_name">Last name: </label>
+    <input name="last_name" type="text" />
+    <label for="username">Username: </label>
+    <input name="username" placeholder="username" type="text" />
+    <label for="password">Password: </label>
+    <input name="password" type="password" />
+    <label for="confirmPassword">Confirm password: </label>
+    <input name="confirmPassword" type="password" />
+    <button>Register</button>
+  </form>
+
+  <% if (errors) {%>
+    <ul>
+      <% for (error of errors) {%>
+        <li><%= error.msg %></li>
+      <%}%>
+    </ul>
+  <%}%>
+</body>
+</html>

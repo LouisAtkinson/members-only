@@ -1,0 +1,24 @@
+<% extend('layout') %>
+ 
+<% if (user) {%>
+    <a href="/create-post">Create a new post</a>
+
+    <% for (post of posts) { %>
+        <div class="post">
+            <div class="author"><%= post.author.username %></div>
+            <div class="timestamp"><%= post.time %></div>
+            <div class="post-text"><%= post.text %></div>
+        </div>
+    <%}%>
+
+<% } else { %>
+
+    <% for (post of posts) { %>
+        <div class="post">
+            <div class="author">Author hidden</div>
+            <div class="timestamp">Timestamp hidden</div>
+            <div class="post-text"><%= post.text %></div>
+        </div>
+    <%}%>
+
+<%}%>
