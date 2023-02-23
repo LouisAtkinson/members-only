@@ -1,24 +1,38 @@
 <% extend('layout') %>
  
 <% if (user) {%>
-    <a href="/create-post">Create a new post</a>
+    <a href="/create-post" class="new-post">Create a new post</a>
 
-    <% for (post of posts) { %>
-        <div class="post">
-            <div class="author"><%= post.author.username %></div>
-            <div class="timestamp"><%= post.time %></div>
-            <div class="post-text"><%= post.text %></div>
-        </div>
-    <%}%>
+    <div class="posts">
+
+        <% for (post of posts) { %>
+            <div class="post">
+                <div class="author"><%= post.author.username %></div>
+                <div class="timestamp"><%= post.time %></div>
+                <hr>
+                <div class="post-text"><%= post.text %></div>
+            </div>
+        <%}%>
+
+    </div>
 
 <% } else { %>
+
+    <div class="welcome">Welcome to Members Only, an exclusive clubhouse where members can write posts. To see the authors and timestamps of previous posts, 
+        and to gain the ability to write your own posts, please register and sign in.
+    </div>
+
+    <div class="posts">
 
     <% for (post of posts) { %>
         <div class="post">
             <div class="author">Author hidden</div>
             <div class="timestamp">Timestamp hidden</div>
+            <hr>
             <div class="post-text"><%= post.text %></div>
         </div>
     <%}%>
+
+    </div>
 
 <%}%>

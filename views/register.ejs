@@ -1,26 +1,35 @@
 <% extend('layout') %>
 
-  <h1>Register</h1>
-  <form action="" method="POST">
-    <label for="first_name">First name: </label>
-    <input name="first_name" type="text" />
-    <label for="last_name">Last name: </label>
-    <input name="last_name" type="text" />
-    <label for="username">Username: </label>
-    <input name="username" placeholder="username" type="text" />
-    <label for="password">Password: </label>
-    <input name="password" type="password" />
-    <label for="confirmPassword">Confirm password: </label>
-    <input name="confirmPassword" type="password" />
-    <button>Register</button>
-  </form>
+  <div class="register">
+    <h1>Register</h1>
+    <form action="" method="POST">
+      <label for="first_name">First name: </label>
+      <input name="first_name" type="text" value="<%= input.first_name %>" />
+      <br>
+      <label for="last_name">Last name: </label>
+      <input name="last_name" type="text" value="<%= input.last_name %>" />
+      <br>
+      <label for="username">Username: </label>
+      <input name="username" type="text" value="<%= input.username %>" />
+      <br>
+      <label for="password">Password: </label>
+      <input name="password" type="password" value="<%= input.password %>" />
+      <br>
+      <label for="passwordConfirmation">Confirm password: </label>
+      <input name="passwordConfirmation" type="password" value="<%= input.passwordConfirmation %>" />
+      <br>
+      <button class="btn">Register</button>
+    </form>
+  
 
-  <% if (errors) {%>
-    <ul>
-      <% for (error of errors) {%>
-        <li><%= error.msg %></li>
-      <%}%>
-    </ul>
-  <%}%>
+    <% if (errors) {%>
+      <ul>
+        <% for (error of errors) {%>
+          <li><%= error.msg %></li>
+        <%}%>
+      </ul>
+    <%}%>
+
+  </div>
 </body>
 </html>

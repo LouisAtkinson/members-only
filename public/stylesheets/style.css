@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+:root {
+    --dark: #13283a;
+    --dusk: #6d2033;
+    --haze: #8b3f49;
+    --sunset: #c96567;
+    --silver: #97aabd;
+    --pink: #dd3f66;
+    --lighterhaze: #c57580;
+    --lightpink: rgb(223, 154, 169)
+}
+
+body {
+    font: 14px Roboto, Helvetica, Arial, sans-serif;
+    background-image: linear-gradient(to right, var(--sunset) , var(--haze));
+}
+  
+html, body {
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    margin-bottom: 45px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 600px) {
+    #header {
+        padding: 10px;
+    }
+
+    .links {
+        padding: 10px;
+    }
+
+    .home {
+        font-size: 20px;
+    }
+
+    .greeting {
+        font-size: 16px;
+        padding-right: 12px;
+    }
+
+    .register, .post, .signin, .writepost {
+        max-width: 350px;
+        box-sizing: border-box;
+    }
+
+    hr {
+        width: 280px;
+    }
+    
+}
+
+#header {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+}
+
+.links {
+    color: white;
+    padding: 15px;
+}
+
+.links:hover, .btn:hover {
+    color: var(--sunset);
+    transition: 0.3s;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { 
+  text-decoration: none; 
+}
+
+a:active { text-decoration: none; }
+
+.greeting {
+    color: var(--pink);
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.home {
+    font-size: 24px;
+    color: var(--pink);
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.home:hover {
+    color: #b3294b;
+    transition: 0.2s;
+}
+
+.welcome {
+    text-align: center;
+    align-self: center;
+    max-width: 500px;
+    padding: 25px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+#content {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-post {
+    align-self: center;
+    background-color: black;
+    padding: 10px;
+    margin: 30px;
+    color: var(--lightpink);
+    border-radius: 14px;
+}
+
+.new-post:hover {
+    color: var(--pink);
+    transition: 0.2s;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 120px;
+    max-width: 350px;
+    background-color: var(--lighterhaze);
+    border: solid 1px var(--dark);
+    color: black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.author, .timestamp {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dusk);
+}
+
+.author {
+    padding-bottom: 5px;
+}
+
+hr {
+    min-width: 320px;
+    border: solid 1px var(--dusk);
+    margin-top: 10px;
+}
+
+.post-text {
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.register, .signin, .writepost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+    margin: 40px;
+    border: solid 1px var(--dark);
+    background-color: var(--lighterhaze);
+}
+
+.register {
+    width: 400px;
+}
+
+.signin {
+    max-width: 400px;
+    min-width: 350px;
+}
+
+.writepost {
+    width: 350px;
+}
+
+.textbox {
+    min-height: 100px;
+    resize: none;
+    font-family: Roboto;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.register label {
+    display: inline-block;
+    width: 140px;
+    padding-bottom: 18px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.signin label {
+    display: inline-block;
+    width: 100px;
+    padding-bottom: 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+input {
+    padding: 3px;
+}
+
+.btn {
+    border: none;
+    background-color: black;
+    color: white;
+    margin: 25px;
+    padding: 7px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+li {
+    text-align: left;
+    margin-bottom: 10px;
+}

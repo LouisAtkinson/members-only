@@ -15,4 +15,8 @@ UserSchema.virtual("name").get(function () {
   return fullname;
 });
 
+UserSchema.virtual("first_name_cap").get(function () {
+  return `${this.first_name}`.charAt(0).toUpperCase() + `${this.first_name}`.slice(1);
+});
+
 module.exports = mongoose.model("User", UserSchema);
