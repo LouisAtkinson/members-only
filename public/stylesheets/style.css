@@ -256,5 +256,13 @@ li {
     hr {
         width: 250px;
     }
+
+    .register label {
+        width: 130px;
+    }
+
+    .register input {
+        width: 150px;
+    }
     
 }
