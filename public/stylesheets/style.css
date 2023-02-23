@@ -29,35 +29,6 @@ body {
     flex-direction: column;
 }
 
-@media (max-width: 600px) {
-    #header {
-        padding: 10px;
-    }
-
-    .links {
-        padding: 10px;
-    }
-
-    .home {
-        font-size: 20px;
-    }
-
-    .greeting {
-        font-size: 16px;
-        padding-right: 12px;
-    }
-
-    .register, .post, .signin, .writepost {
-        max-width: 350px;
-        box-sizing: border-box;
-    }
-
-    hr {
-        width: 280px;
-    }
-    
-}
-
 #header {
     box-sizing: border-box;
     display: flex;
@@ -253,4 +224,37 @@ input {
 li {
     text-align: left;
     margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    #header {
+        padding: 0px;
+        height: 70px;
+    }
+
+    .links {
+        width: 60px;
+        padding: 0px;
+    }
+
+    .home {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    .greeting {
+        font-size: 16px;
+        padding-left: 15px;
+        width: 60px;
+    }
+
+    .register, .post, .signin, .writepost {
+        max-width: 350px;
+        box-sizing: border-box;
+    }
+
+    hr {
+        width: 250px;
+    }
+    
 }
